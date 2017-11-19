@@ -26,6 +26,7 @@
     </NuGetPackageImportStamp>
     <TargetFrameworkProfile />
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,6 +46,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Fortis, Version=4.2.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Fortis.4.2.2\lib\net452\Fortis.dll</HintPath>
+    </Reference>
+    <Reference Include="Fortis.Mvc, Version=4.2.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Fortis.Mvc-5.4.2.2\lib\net452\Fortis.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="Kamsar.WebConsole, Version=1.2.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Kamsar.WebConsole.1.2.2.0\lib\net40\Kamsar.WebConsole.dll</HintPath>
       <Private>True</Private>
@@ -200,4 +207,3 @@
   </Target>
   -->
 </Project>
-

@@ -1,5 +1,5 @@
 module.exports = function () {
-  var instanceRoot = "C:\\websites\\Habitat.dev.local";
+  var instanceRoot = "C:\\inetpub\\wwwroot\\habitat";
   var config = {
     websiteRoot: instanceRoot + "\\Website",
     sitecoreLibraries: instanceRoot + "\\Website\\bin",
@@ -7,7 +7,7 @@ module.exports = function () {
     solutionName: "Habitat",
     buildConfiguration: "Debug",
     buildPlatform: "Any CPU",
-    buildToolsVersion: 14.0, //change to 15.0 for VS2017 support
+    buildToolsVersion: 'auto', //change to 15.0 for VS2017 support
     publishPlatform: "AnyCpu",
     runCleanBuilds: false
   };

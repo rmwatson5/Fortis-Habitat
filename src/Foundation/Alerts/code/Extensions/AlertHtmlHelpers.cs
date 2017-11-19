@@ -1,6 +1,7 @@
 ﻿namespace Sitecore.Foundation.Alerts.Extensions
 {
-  using System.Web.Mvc;
+    using System;
+    using System.Web.Mvc;
   using System.Web.Mvc.Html;
   using Sitecore.Data;
   using Sitecore.Diagnostics;
@@ -27,5 +28,12 @@
 
       return Context.PageMode.IsNormal ? new MvcHtmlString(string.Empty) : helper.Partial(Constants.InfoMessageView, InfoMessage.Error(friendlyMessage));
     }
-  }
+
+      public static MvcHtmlString PageEditorError(this HtmlHelper helper, string errorMessage, string friendlyMessage, Type itemType)
+      {
+          Log.Error($@"Presentation error: {errorMessage}, Expected Type {itemType.Name}", typeof(AlertHtmlHelpers));
+
+          return Context.PageMode.IsNormal ? new MvcHtmlString(string.Empty) : helper.Partial(Constants.InfoMessageView, InfoMessage.Error(friendlyMessage));
+      }
+    }
 }
