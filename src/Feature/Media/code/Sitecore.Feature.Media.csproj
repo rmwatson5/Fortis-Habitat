@@ -133,10 +133,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FortisModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\FortisItems\IImageFieldWrapperExt.cs" />
+    <Compile Include="Models\FortisItems\ImageFieldWrapperExt.cs" />
     <Compile Include="Models\MediaBackgroundRenderingModel.cs" />
+    <Compile Include="Models\MediaCarouselRenderingModel.cs" />
     <Compile Include="Models\MediaSelectorElement.cs" />
-    <Compile Include="Repositories\MediaSelectorElementsRepository.cs" />
+    <Compile Include="Models\Templates\HasMedia.cs" />
+    <Compile Include="Models\Templates\HasMediaImage.cs" />
+    <Compile Include="Models\Templates\HasMediaVideo.cs" />
+    <Compile Include="Models\Templates\IHasMedia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\MediaSelectorElementsRepository.cs" />
     <Compile Include="Templates.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -160,6 +167,10 @@
     <Content Include="packages.config" />
     <Content Include="Views\MediaFeature\Video.cshtml" />
     <Content Include="Fortis\Fortis.t4" />
+    <Content Include="App_Config\Include\Fortis\Sitecore.Feature.Media.Models.config" />
+    <Content Include="Views\MediaFeature\MediaCarouselOld.cshtml" />
+    <Content Include="Views\MediaFeature\LightboxImageOld.cshtml" />
+    <Content Include="Views\MediaFeature\LightboxVideoOld.cshtml" />
     <None Include="Web.config" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Web.Debug.config">

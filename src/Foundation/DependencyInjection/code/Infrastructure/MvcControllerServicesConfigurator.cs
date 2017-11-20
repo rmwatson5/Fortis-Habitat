@@ -1,5 +1,6 @@
 ﻿namespace Sitecore.Foundation.DependencyInjection.Infrastructure
 {
+    using System.Reflection;
     using System.Web.Mvc;
     using Fortis.Model;
     using Fortis.Mvc.Providers;

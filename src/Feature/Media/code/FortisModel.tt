@@ -38,7 +38,7 @@
 	bool IsSolr = false;
 	string SitecoreSystemTemplatePath = "/sitecore/templates/System/";
 	string ClientTemplatePath = "/sitecore/templates/Feature/Media";
-	string BaseNamespace = "Sitecore.Feature.Media.Model";
+	string BaseNamespace = "Sitecore.Feature.Media";
 	string RelativeNameSpaceUserDefined = "Habitat";
 	string BaseRenderingParametersTemplateId = "{E13DB450-F493-42D5-B1C1-536A57AED2A6}";
 #>

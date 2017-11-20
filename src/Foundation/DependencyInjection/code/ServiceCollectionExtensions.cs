@@ -146,7 +146,7 @@ namespace Sitecore.Foundation.DependencyInjection
             }
         }
 
-        private static Assembly[] GetAssemblies(IEnumerable<string> assemblyFilters)
+        public static Assembly[] GetAssemblies(IEnumerable<string> assemblyFilters)
         {
             var assemblies = new List<Assembly>();
             foreach (var assemblyFilter in assemblyFilters)

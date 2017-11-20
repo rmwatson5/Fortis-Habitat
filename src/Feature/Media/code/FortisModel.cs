@@ -16,7 +16,7 @@
 /*
  * Fortis Template Models for Sitecore Demo
  *
- * Generated at 11/17/2017 19:57:35
+ * Generated at 11/20/2017 13:13:11
  */
 
 
@@ -35,9 +35,10 @@ using Sitecore.ContentSearch.Linq.Common;
 using Fortis.Model;
 using Fortis.Model.Fields;
 using Fortis.Providers;
+using Sitecore.Feature.Media.Models.FortisItems;
 
 #region Background Type Folder (Habitat)
-namespace Sitecore.Feature.Media.Model.Templates
+namespace Sitecore.Feature.Media.Models.Templates
 {
 	/// <summary><para>Template: Background Type Folder</para><para>ID: {1fd75c49-f524-4c15-9f82-dcb2d4cf2fa9}</para><para>/sitecore/templates/Feature/Media/Background Type Folder</para></summary>
 	[TemplateMapping("{1fd75c49-f524-4c15-9f82-dcb2d4cf2fa9}", "InterfaceMap")]
@@ -58,7 +59,7 @@ namespace Sitecore.Feature.Media.Model.Templates
 }
 #endregion
 #region Background Type (Habitat)
-namespace Sitecore.Feature.Media.Model.Templates
+namespace Sitecore.Feature.Media.Models.Templates
 {
 	/// <summary><para>Template: Background Type</para><para>ID: {55a5bdad-eb69-40f5-8195-cda182e48ee4}</para><para>/sitecore/templates/Feature/Media/Background Type</para></summary>
 	[TemplateMapping("{55a5bdad-eb69-40f5-8195-cda182e48ee4}", "InterfaceMap")]
@@ -94,7 +95,7 @@ namespace Sitecore.Feature.Media.Model.Templates
 }
 #endregion
 #region ParametersTemplate_SectionBackground (Habitat)
-namespace Sitecore.Feature.Media.Model.Templates
+namespace Sitecore.Feature.Media.Models.Templates
 {
 	/// <summary><para>Template: ParametersTemplate_SectionBackground</para><para>ID: {b962a806-d708-4001-b0a3-3fa31f2263c5}</para><para>/sitecore/templates/Feature/Media/ParametersTemplates/ParametersTemplate_SectionBackground</para></summary>
 	[TemplateMapping("{b962a806-d708-4001-b0a3-3fa31f2263c5}", "InterfaceMap")]
@@ -156,7 +157,7 @@ namespace Sitecore.Feature.Media.Model.Templates
 }
 #endregion
 #region _MediaParameters (Habitat)
-namespace Sitecore.Feature.Media.Model.Templates
+namespace Sitecore.Feature.Media.Models.Templates
 {
 	/// <summary><para>Template: _MediaParameters</para><para>ID: {5df30dc0-e2fc-4921-b8f2-c54fac1bd03e}</para><para>/sitecore/templates/Feature/Media/ParametersTemplates/_MediaParameters</para></summary>
 	[TemplateMapping("{5df30dc0-e2fc-4921-b8f2-c54fac1bd03e}", "InterfaceMap")]
@@ -177,7 +178,7 @@ namespace Sitecore.Feature.Media.Model.Templates
 }
 #endregion
 #region _HasMedia (Habitat)
-namespace Sitecore.Feature.Media.Model.Templates
+namespace Sitecore.Feature.Media.Models.Templates
 {
 	/// <summary><para>Template: _HasMedia</para><para>ID: {a44e450e-ba3f-4faf-9c53-c63241cc34eb}</para><para>/sitecore/templates/Feature/Media/_HasMedia</para></summary>
 	[TemplateMapping("{a44e450e-ba3f-4faf-9c53-c63241cc34eb}", "InterfaceMap")]
@@ -193,7 +194,7 @@ namespace Sitecore.Feature.Media.Model.Templates
 		string MediaDescriptionValue { get; }
 
     	/// <summary><para>Template: _HasMedia</para><para>Field: MediaThumbnail</para><para>Data type: Image</para></summary>
-		IImageFieldWrapper MediaThumbnail { get; }
+		IImageFieldWrapperExt MediaThumbnail { get; }
 
     	/// <summary><para>Template: _HasMedia</para><para>Field: MediaThumbnail</para><para>Data type: Image</para></summary>
 		string MediaThumbnailValue { get; }
@@ -225,7 +226,7 @@ namespace Sitecore.Feature.Media.Model.Templates
  		public string MediaDescriptionValue => this.MediaDescription.Value;
 
 		/// <summary><para>Field: MediaThumbnail</para><para>Data type: Image</para></summary>
-		public virtual IImageFieldWrapper MediaThumbnail => this.GetField<ImageFieldWrapper>("MediaThumbnail");
+		public virtual IImageFieldWrapperExt MediaThumbnail => this.GetField<ImageFieldWrapperExt>("MediaThumbnail");
 
  		public string MediaThumbnailValue => this.MediaThumbnail.Value;
 
@@ -239,16 +240,16 @@ namespace Sitecore.Feature.Media.Model.Templates
 }
 #endregion
 #region _HasMediaImage (Habitat)
-namespace Sitecore.Feature.Media.Model.Templates
+namespace Sitecore.Feature.Media.Models.Templates
 {
 	/// <summary><para>Template: _HasMediaImage</para><para>ID: {fae0c913-1600-4eba-95a9-4d6fd7407e25}</para><para>/sitecore/templates/Feature/Media/_HasMediaImage</para></summary>
 	[TemplateMapping("{fae0c913-1600-4eba-95a9-4d6fd7407e25}", "InterfaceMap")]
 	public partial interface IHasMediaImage : IItemWrapper,
-		Sitecore.Feature.Media.Model.Templates.IHasMedia
+		Sitecore.Feature.Media.Models.Templates.IHasMedia
 	{
 
     	/// <summary><para>Template: _HasMediaImage</para><para>Field: MediaImage</para><para>Data type: Image</para></summary>
-		IImageFieldWrapper MediaImage { get; }
+		IImageFieldWrapperExt MediaImage { get; }
 
     	/// <summary><para>Template: _HasMediaImage</para><para>Field: MediaImage</para><para>Data type: Image</para></summary>
 		string MediaImageValue { get; }
@@ -272,12 +273,12 @@ namespace Sitecore.Feature.Media.Model.Templates
  		public string MediaDescriptionValue => this.MediaDescription.Value;
 
 		/// <summary><para>Field: MediaImage</para><para>Data type: Image</para></summary>
-		public virtual IImageFieldWrapper MediaImage => this.GetField<ImageFieldWrapper>("MediaImage");
+		public virtual IImageFieldWrapperExt MediaImage => this.GetField<ImageFieldWrapperExt>("MediaImage");
 
  		public string MediaImageValue => this.MediaImage.Value;
 
 		/// <summary><para>Field: MediaThumbnail</para><para>Data type: Image</para></summary>
-		public virtual IImageFieldWrapper MediaThumbnail => this.GetField<ImageFieldWrapper>("MediaThumbnail");
+		public virtual IImageFieldWrapperExt MediaThumbnail => this.GetField<ImageFieldWrapperExt>("MediaThumbnail");
 
  		public string MediaThumbnailValue => this.MediaThumbnail.Value;
 
@@ -291,7 +292,7 @@ namespace Sitecore.Feature.Media.Model.Templates
 }
 #endregion
 #region _HasMediaSelector (Habitat)
-namespace Sitecore.Feature.Media.Model.Templates
+namespace Sitecore.Feature.Media.Models.Templates
 {
 	/// <summary><para>Template: _HasMediaSelector</para><para>ID: {ae4635af-cfbf-4bf6-9b50-00be23a910c0}</para><para>/sitecore/templates/Feature/Media/_HasMediaSelector</para></summary>
 	[TemplateMapping("{ae4635af-cfbf-4bf6-9b50-00be23a910c0}", "InterfaceMap")]
@@ -327,12 +328,12 @@ namespace Sitecore.Feature.Media.Model.Templates
 }
 #endregion
 #region _HasMediaVideo (Habitat)
-namespace Sitecore.Feature.Media.Model.Templates
+namespace Sitecore.Feature.Media.Models.Templates
 {
 	/// <summary><para>Template: _HasMediaVideo</para><para>ID: {5a1b724b-b396-4c48-a833-655cd19018e1}</para><para>/sitecore/templates/Feature/Media/_HasMediaVideo</para></summary>
 	[TemplateMapping("{5a1b724b-b396-4c48-a833-655cd19018e1}", "InterfaceMap")]
 	public partial interface IHasMediaVideo : IItemWrapper,
-		Sitecore.Feature.Media.Model.Templates.IHasMedia
+		Sitecore.Feature.Media.Models.Templates.IHasMedia
 	{
 
     	/// <summary><para>Template: _HasMediaVideo</para><para>Field: MediaVideoLink</para><para>Data type: link</para></summary>
@@ -360,7 +361,7 @@ namespace Sitecore.Feature.Media.Model.Templates
  		public string MediaDescriptionValue => this.MediaDescription.Value;
 
 		/// <summary><para>Field: MediaThumbnail</para><para>Data type: Image</para></summary>
-		public virtual IImageFieldWrapper MediaThumbnail => this.GetField<ImageFieldWrapper>("MediaThumbnail");
+		public virtual IImageFieldWrapperExt MediaThumbnail => this.GetField<ImageFieldWrapperExt>("MediaThumbnail");
 
  		public string MediaThumbnailValue => this.MediaThumbnail.Value;
 
@@ -379,7 +380,7 @@ namespace Sitecore.Feature.Media.Model.Templates
 }
 #endregion
 #region _MediaSiteExtension (Habitat)
-namespace Sitecore.Feature.Media.Model.Templates
+namespace Sitecore.Feature.Media.Models.Templates
 {
 	/// <summary><para>Template: _MediaSiteExtension</para><para>ID: {d339e56b-6a8a-46bd-a7d3-c9725d50dd4a}</para><para>/sitecore/templates/Feature/Media/_MediaSiteExtension</para></summary>
 	[TemplateMapping("{d339e56b-6a8a-46bd-a7d3-c9725d50dd4a}", "InterfaceMap")]
@@ -417,4 +418,4 @@ namespace Sitecore.Feature.Media.Model.Templates
 
 
 
-// Generated in 48ms
+// Generated in 17ms

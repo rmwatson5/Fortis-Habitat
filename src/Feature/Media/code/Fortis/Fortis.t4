@@ -35,6 +35,7 @@ using Sitecore.ContentSearch.Linq.Common;
 using Fortis.Model;
 using Fortis.Model.Fields;
 using Fortis.Providers;
+using Sitecore.Feature.Media.Models.FortisItems;
 
 <#
 
@@ -71,7 +72,7 @@ public void GenerateTemplate(ITemplate template)
 	foreach (var baseTemplate in template.BaseTemplates)
 	{
 		#>,
-		<#= FullNamespace(baseTemplate.Path) + "." + InterfaceName(baseTemplate.Name)  #><#+
+		<#= FullNamespace(baseTemplate.Path) + "." + InterfaceName(baseTemplate.Name) #><#+
 	}
 #>
 
@@ -207,7 +208,7 @@ public string RelativeNamespace(string templatePath)
 
 public string FullNamespace(string templatePath)
 {
-	return BaseNamespace + ".Templates";
+	return BaseNamespace + ".Models.Templates";
 }
 
 public string TitleCase(string name)
@@ -314,7 +315,7 @@ public string GetFieldWrapperType(string typeName)
 			wrapperType = "BooleanFieldWrapper";
 			break;
 		case "image":
-			wrapperType = "ImageFieldWrapper";
+			wrapperType = "ImageFieldWrapperExt";
 			break;
 		case "file":
 			wrapperType = "FileFieldWrapper";
